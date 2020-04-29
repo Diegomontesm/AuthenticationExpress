@@ -1,0 +1,39 @@
+{{> header }}
+
+<h1>{{title}}</h1>
+{{#if errors}}
+    {{#each errors}}
+    <div class="alert alert-danger">
+    {{this.msg}}
+    </div>
+    {{/each}}
+{{/if}}
+
+<div class="jumbotron">
+  <h1 class="display-4">Registro</h1>
+</div>
+
+<form>
+   <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password"  name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleUsername">Username</label>
+    <input type="text" name="username" class="form-control" id="exampleUsername" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="exampleRePassword">Re-Enter Password</label>
+    <input type="password" name="repassword" class="form-control" id="exampleInputPassword2" placeholder="Re-Enter Password">
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-success">Enviar</button>
+  </div>
+</form>
+
+{{> footer-end }}
